@@ -54,6 +54,7 @@ export default function Home() {
           onKeyDown={(e) => e.key === "Enter" && createDocument()}
         ></input>
       </ModalBody>
+
       <ModalFooter>
         <Button
           color="blue"
