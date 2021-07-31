@@ -5,7 +5,7 @@ import { useRouter } from "next/dist/client/router";
 import { db } from "../../firebase";
 import { useDocumentOnce } from "react-firebase-hooks/firestore";
 import { getSession, signOut, useSession } from "next-auth/client";
-import Login from "../../components/login";
+import Login from "../../components/Login";
 import TextEditor from "../../components/TextEditor";
 
 function Doc() {
