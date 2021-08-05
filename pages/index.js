@@ -17,7 +17,7 @@ import { useRouter } from "next/dist/client/router";
 
 export default function Home() {
   const [session] = useSession();
-    const router = useRouter();
+  const router = useRouter();
 
   if (!session) return <Login />;
 
@@ -32,20 +32,25 @@ export default function Home() {
       .orderBy("timestamp", "desc")
   );
 
+  const navigateToCreatedDoc = (createdDoc) =>
+    router.push(`/doc/${createdDoc}`);
+
   async function createDocument() {
     if (!input) return;
 
-    const createdDoc = await db.collection("userDocs").doc(session.user.email).collection("docs").add({
-      fileName: input,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    });
+    const createdDoc = await db
+      .collection("userDocs")
+      .doc(session.user.email)
+      .collection("docs")
+      .add({
+        fileName: input,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
 
     setInput("");
     setShowModal(false);
-    navigateToCreatedDoc(createdDoc.id)
-  };
-
-  const navigateToCreatedDoc = (createdDoc) => router.push(`/doc/${createdDoc}`)
+    navigateToCreatedDoc(createdDoc.id);
+  }
 
   const modal = (
     <Modal size="sm" active={showModal} toggler={() => setShowModal(false)}>
