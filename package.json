@@ -6,21 +6,34 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/helper-create-class-features-plugin": "^7.14.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@material-tailwind/react": "0.3.4",
     "@next-auth/firebase-adapter": "^0.1.2",
+    "@next-auth/prisma-legacy-adapter": "0.0.1-canary.127",
+    "@next-auth/typeorm-legacy-adapter": "0.0.2-canary.129",
+    "@next/react-refresh-utils": "^10.2.3",
     "draft-js": "^0.11.7",
+    "file-loader": "^6.2.0",
     "firebase": "^8.8.1",
     "immutable": "^3.8.2",
-    "next": "latest",
+    "next": "^10.2.3",
     "next-auth": "^3.27.3",
+    "next-images": "^1.8.1",
+    "postcss-load-config": "^3.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-draft-wysiwyg": "^1.14.7",
-    "react-firebase-hooks": "^3.0.4"
+    "react-firebase-hooks": "^3.0.4",
+    "typeorm": "^0.2.36",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "autoprefixer": "^10.3.1",
+    "css-loader": "^6.2.0",
+    "install": "^0.13.0",
+    "npm": "^7.20.3",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
   }
 }
