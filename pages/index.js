@@ -8,7 +8,7 @@ import Login from "../components/Login";
 import Modal from "@material-tailwind/react/Modal";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalFooter from "@material-tailwind/react/ModalFooter";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { db } from "../firebase";
 import firebase from "firebase";
 import { useCollectionOnce } from "react-firebase-hooks/firestore";
@@ -31,10 +31,6 @@ export default function Home() {
       .collection("docs")
       .orderBy("timestamp", "desc")
   );
-
-  useEffect(() => {
-    createDocument();
-  }, [showModal]);
 
   const navigateToCreatedDoc = (createdDoc) =>
     router.push(`/doc/${createdDoc}`);
