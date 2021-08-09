@@ -59,7 +59,7 @@ export default function Home() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           type="text"
-          className="w-full outline-none"
+          className="w-full px-4 py-1 transition border-2 rounded-full outline-none"
           placeholder="Enter document's name"
           onKeyDown={(e) => e.key === "Enter" && createDocument()}
         ></input>
@@ -68,6 +68,7 @@ export default function Home() {
       <ModalFooter>
         <Button
           color="blue"
+          className="mr-2"
           buttonType="link"
           onClick={(e) => setShowModal(false)}
           ripple="dark"
@@ -75,7 +76,12 @@ export default function Home() {
           Cancel
         </Button>
 
-        <Button color="blue" onClick={createDocument} ripple="light">
+        <Button
+          color="blue"
+          className="mr-2"
+          onClick={createDocument}
+          ripple="light"
+        >
           Create
         </Button>
       </ModalFooter>
