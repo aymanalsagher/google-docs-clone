@@ -1,3 +1,5 @@
+const { FilterWarningsPlugin } = require("webpack-filter-warnings-plugin");
+
 module.exports = {
   images: {
     domains: ["ssl.gstatic.com", "i.pinimg.com"],
