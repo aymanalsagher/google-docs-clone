@@ -70,8 +70,6 @@ function Doc() {
   );
 }
 
-export default Doc;
-
 export async function getServerSideProps(context) {
   const session = await getSession(context);
 
@@ -81,3 +79,5 @@ export async function getServerSideProps(context) {
     },
   };
 }
+
+export default Doc;
